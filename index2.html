@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>jQuery Traversing Down children() Method</title>
+        <title>jQuery Traversing Down find() Method</title>
         <style>
             .descendants * { 
                 display: block;
@@ -14,22 +14,22 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script>
             $(document).ready(function(){
-                $(".descendants").children().css({"color": "red", "border": "2px solid red"});
+                $("div").find("span").css({"color": "red", "border": "2px solid red"});
             });
         </script>
     </head>
     <body>
 
         <div class="descendants" style="width:500px;">div (current element) 
-            <p>p (child-1)
+            <p>p (child1)
                 <span>span (grandchild)</span>   
             </p>
-            <p>p (child-2)
-                <span>span (grandchild)</span>
+            <p>p (child2)
+                <label>Label (grandchild)
+                    <span>span (great-grandchild)</span>
+                </label>                
             </p> 
-        </div>
-        <div class="descendants-2">second element
-            <p>second - p</p>
+            <span>span (child3)</span> 
         </div>
 
     </body>
